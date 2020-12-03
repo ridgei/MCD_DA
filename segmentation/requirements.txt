@@ -1,5 +1,5 @@
 git+https://github.com/lucasb-eyer/pydensecrf.git
-visdom
-tqdm
-easydict
-tensorboard_logger
+visdom==0.1.8.9
+tqdm==4.54.0
+easydict==1.9
+tensorboard_logger==0.1.0
