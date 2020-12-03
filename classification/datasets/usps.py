@@ -1,10 +1,13 @@
 import numpy as np
 import gzip
-import cPickle
+import _pickle as cPickle
+
+from os.path import join
+from classification.datasets.const import DATA_PATH
 
 
 def load_usps(all_use=False):
-    f = gzip.open('data/usps_28x28.pkl', 'rb')
+    f = gzip.open(join(DATA_PATH, 'usps_28x28.pkl'), 'rb')
     data_set = cPickle.load(f)
     f.close()
     img_train = data_set[0][0]
