@@ -18,3 +18,12 @@ COPY segmentation/requirements.txt $WORK_PATH/segmentation/
 RUN pip install ${PIP_OPTIONS} -r $WORK_PATH/docker/requirements.txt && \
     pip install ${PIP_OPTIONS} -r $WORK_PATH/segmentation/requirements.txt && \
 		pip install ${PIP_OPTIONS} -U setuptools
+
+# duser setting
+ARG USER_ID
+ARG GROUP_ID
+RUN addgroup --gid $GROUP_ID duser && \
+    adduser --disabled-password --gecos '' --uid $USER_ID --gid $GROUP_ID duser && \
+    adduser duser sudo && \
+    echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+USER duser
