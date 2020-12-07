@@ -1,2 +1,7 @@
 #!/bin/sh
-docker build -t mcd_da -f docker/Dockerfile .
+docker build \
+  --build-arg USER_ID=$(id -u) \
+  --build-arg GROUP_ID=$(id -g) \
+  -f docker/Dockerfile \
+  -t mcd_da \
+  .

@@ -58,8 +58,8 @@ def get_common_training_parser(parser):
                         help="normalize way")
     
     # ---------- Optional Hyperparameters ---------- #
-    # parser.add_argument('--augment', action="store_true",
-    #                     help='whether you use data-augmentation or not')
+    parser.add_argument('--augment', action="store_true",
+                        help='whether you use data-augmentation or not')
     parser.add_argument('--crop_size', type=int, default=-1,
                         help='crop size (default: -1): 512 is good for cityscapes')
     # 512 is derived from https://github.com/mitmul/chainer-pspnet/blob/05545d5ed254ec557697442cf98b1a2c5135216a/datasets/cityscapes/cityscapes_transformed.py#L13
