@@ -1,0 +1,5 @@
+segmentation/garbage_data/
+segmentation/eepa_data/
+segmentation/logs/
+segmentation/mlruns/
+segmentation/__pycache__/

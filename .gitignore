@@ -1,6 +1,17 @@
 # Custom ignores
 classification/record/
-segmentation/train_output/
+segmentation/mlruns/
+segmentation/logs/
+segmentation/garbage_data
+segmentation/eepa_data
+
+
+# vim
+*.swp
+
+# nohup
+*.out
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
